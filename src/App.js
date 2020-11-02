@@ -32,7 +32,6 @@ export const App = () => {
   };
 
   const handleJump = (jumpTo) => {
-    console.log(jumpTo);
     const j = parseInt(jumpTo);
     if (j >= 1 && j <= slides.length) {
       setCount(1);
