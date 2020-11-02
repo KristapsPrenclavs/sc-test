@@ -1,0 +1,56 @@
+.app {
+  display: flex;
+}
+.container {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  margin: 3vh auto;
+  height: 60vh;
+}
+
+.carousel {
+  height: 100%;
+  width: auto;
+  display: flex;
+  position: relative;
+}
+.slides {
+  display: flex;
+  transition: all 0.4s;
+}
+
+.slides .slide {
+  border: 0.5vh solid orange;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.arrows {
+  top: 10px;
+  cursor: pointer;
+}
+
+.arrow-next {
+  position: absolute;
+  right: 10px;
+}
+
+.arrow-prev {
+  position: absolute;
+  left: 10px;
+}
+
+.plus-minus {
+  position: inherit;
+}
+.plus-minus .increase {
+  width: 4vh;
+  cursor: pointer;
+}
+
+.plus-minus .decrease {
+  width: 4vh;
+  cursor: pointer;
+}
