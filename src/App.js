@@ -15,13 +15,28 @@ export const App = () => {
 
   const handleNewCount = (newCount) => {
     if (newCount <= slides.length && newCount > 0) {
-      setCount(newCount);
+      if (currentSlide + count < slides.length) {
+        setCount(newCount);
+      } else if (newCount < count) {
+        setCount(newCount);
+      }
     }
   };
 
   const handleCurrentSlides = (newSlide) => {
     if (newSlide <= slides.length - 1 && newSlide >= 0) {
-      setCurrentSlide(newSlide);
+      if (newSlide + count < slides.length + 1) {
+        setCurrentSlide(newSlide);
+      }
+    }
+  };
+
+  const handleJump = (jumpTo) => {
+    console.log(jumpTo);
+    const j = parseInt(jumpTo);
+    if (j >= 1 && j <= slides.length) {
+      setCount(1);
+      setCurrentSlide(j - 1);
     }
   };
 
@@ -38,7 +53,7 @@ export const App = () => {
         count={count}
         setCount={(newCount) => handleNewCount(newCount)}
       />
-      <JumpTo slides={slides} />
+      <JumpTo slides={slides} handleJump={(jump) => handleJump(jump)} />
     </div>
   );
 };

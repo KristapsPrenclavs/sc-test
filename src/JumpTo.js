@@ -1,9 +1,9 @@
 import React from "react";
 import "./index.css";
 
-export const JumpTo = () => {
+export const JumpTo = (props) => {
   const handleJump = (e) => {
-    console.log(e);
+    props.handleJump(e);
   };
   return (
     <div className="jump-to">

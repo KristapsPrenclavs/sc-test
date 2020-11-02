@@ -8,8 +8,8 @@ export const Slides = (props) => {
     slides.push(props.slides[i]);
   }
 
-  console.log(slides);
-  console.log(props.slides);
+  // console.log(slides);
+  // console.log(props.slides);
 
   return (
     <div className="slides" style={{ width: props.slides.length * 500 }}>
