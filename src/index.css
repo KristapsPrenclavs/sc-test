@@ -18,6 +18,7 @@
 .slides {
   display: flex;
   transition: all 0.4s;
+  width: 100%;
 }
 
 .slides .slide {

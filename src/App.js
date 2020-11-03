@@ -5,7 +5,7 @@ import { JumpTo } from "./JumpTo";
 import { ViewCount } from "./ViewCount";
 
 export const App = () => {
-  const _SLIDECOUNT = 8;
+  const _SLIDECOUNT = 3;
 
   const [slides] = useState(
     Array.from({ length: _SLIDECOUNT }, (key, i) => "Slide " + (i + 1))
@@ -29,6 +29,19 @@ export const App = () => {
         setCurrentSlide(newSlide);
       }
     }
+
+    if (currentSlide === 0 && newSlide === currentSlide - 1) {
+      setCount(1);
+      setCurrentSlide(slides.length - 1);
+    }
+
+    if (
+      currentSlide + count === slides.length &&
+      newSlide === currentSlide + 1
+    ) {
+      setCount(1);
+      setCurrentSlide(0);
+    }
   };
 
   const handleJump = (jumpTo) => {
@@ -42,7 +55,14 @@ export const App = () => {
   return (
     <div className="container">
       <div className="carousel">
-        <Slides currentSlide={currentSlide} count={count} slides={slides} />
+        <Slides
+          // onTouchStart={(touchStartEvent) => handleTouchStart(touchStartEvent)}
+          // onTouchMove={(touchMoveEvent) => handleTouchMove(touchMoveEvent)}
+          // onTouchEnd={() => handleTouchEnd()}
+          currentSlide={currentSlide}
+          count={count}
+          slides={slides}
+        />
         <Arrows
           currentSlide={currentSlide}
           setCurrentSlide={(newSlide) => handleCurrentSlides(newSlide)}
