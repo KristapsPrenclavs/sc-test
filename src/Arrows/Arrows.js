@@ -1,5 +1,5 @@
 import React from "react";
-import "./index.css";
+import "./Arrows.css";
 
 export const Arrows = (props) => {
   const handleNext = () => {

@@ -1,0 +1,12 @@
+.slides {
+  display: flex;
+  width: 100%;
+}
+
+.slides .slide {
+  border: 0.2vh solid blue;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

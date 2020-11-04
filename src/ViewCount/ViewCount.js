@@ -1,5 +1,5 @@
 import React from "react";
-import "./index.css";
+import "./ViewCount.css";
 
 export const ViewCount = (props) => {
   const increaseSlides = () => {

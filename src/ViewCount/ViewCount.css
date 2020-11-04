@@ -1,0 +1,14 @@
+.plus-minus {
+  position: inherit;
+  margin: 5px;
+  margin-left: 45%;
+}
+.plus-minus .increase {
+  width: 4vh;
+  cursor: pointer;
+}
+
+.plus-minus .decrease {
+  width: 4vh;
+  cursor: pointer;
+}

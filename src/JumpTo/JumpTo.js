@@ -1,5 +1,5 @@
 import React from "react";
-import "./index.css";
+import "./JumpTo.css";
 
 export const JumpTo = (props) => {
   const handleJump = (e) => {
